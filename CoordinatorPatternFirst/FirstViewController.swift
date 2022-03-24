@@ -22,9 +22,9 @@ class FirstViewController: UIViewController, CoordinatorDelegate {
     func goToSecondVCButtonConfigure() {
         view.addSubview(goToSecondVCButton)
         goToSecondVCButton.translatesAutoresizingMaskIntoConstraints = false
-        goToSecondVCButton.layer.cornerRadius = 12
-        goToSecondVCButton.backgroundColor = .red
-        goToSecondVCButton.setTitle("Go Back", for: .normal)
+        goToSecondVCButton.layer.cornerRadius = 8
+        goToSecondVCButton.backgroundColor = .systemGray
+        goToSecondVCButton.setTitle(" to the second screen ", for: .normal)
         goToSecondVCButton.setTitleColor(.cyan, for: .normal)
         goToSecondVCButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         goToSecondVCButton.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true

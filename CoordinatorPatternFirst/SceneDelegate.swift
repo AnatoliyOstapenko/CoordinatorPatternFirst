@@ -21,6 +21,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.windowScene = windowScene
         
         let navigationController = UINavigationController()
+        // vyebon start
+        navigationController.navigationBar.tintColor = .systemGray
+        navigationController.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.systemGray]
+        // vyebon end
         let coordinator = Coordinator()
         coordinator.navController = navigationController
 
