@@ -9,7 +9,7 @@ import UIKit
 
 class FirstViewController: UIViewController, CoordinatorDelegate {
     
-    var coordinator: Coordinator?
+    var coordinator: MainCoordinator?
     let goToSecondVCButton = UIButton()
 
     override func viewDidLoad() {

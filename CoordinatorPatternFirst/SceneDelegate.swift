@@ -25,7 +25,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         navigationController.navigationBar.tintColor = .systemGray
         navigationController.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.systemGray]
         // vyebon end
-        let coordinator = Coordinator()
+        let coordinator = MainCoordinator()
         coordinator.navController = navigationController
 
         window?.rootViewController = navigationController

@@ -12,31 +12,34 @@ enum Event {
     case buttonTapped
 }
 
-protocol CoordinatorProtocol {
+protocol Coordinator {
+    var children: [MainCoordinator]? { get set } // optional property
     var navController: UINavigationController? { get set }
     func eventOccured(with type: Event)
     func start()
 }
 
 protocol CoordinatorDelegate {
-    var coordinator: Coordinator? { get set }
-    
+    var coordinator: MainCoordinator? { get set }
 }
 
-class Coordinator: CoordinatorProtocol {
+class MainCoordinator: Coordinator {
+    var children: [MainCoordinator]? = nil // nil when there is only one coordinator
+
     var navController: UINavigationController?
     
     func eventOccured(with type: Event) {
         switch type {
         case .buttonTapped:
             let vc = SecondViewController()
+            vc.item = "transfer data from coordinator"
             navController?.pushViewController(vc, animated: true)
         }
     }
     
     func start() {
-        var vc: UIViewController & CoordinatorDelegate = FirstViewController()
+        let vc = FirstViewController()
         vc.coordinator = self
-        navController?.setViewControllers([vc], animated: true) // remeber: navC is a stack of VC
+        navController?.pushViewController(vc, animated: false)
     }
 }
