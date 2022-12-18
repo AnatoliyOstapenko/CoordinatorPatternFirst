@@ -32,7 +32,7 @@ class MainCoordinator: Coordinator {
         switch type {
         case .buttonTapped:
             let vc = SecondViewController()
-            vc.item = "transfer data from coordinator"
+            vc.textString = "transfer data from coordinator"
             navController?.pushViewController(vc, animated: true)
         }
     }

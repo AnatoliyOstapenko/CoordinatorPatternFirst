@@ -17,14 +17,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // start dancing from here...
 
         guard let windowScene = (scene as? UIWindowScene) else { return }
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window?.windowScene = windowScene
-        
+//        window = UIWindow(frame: UIScreen.main.bounds)
+//        window?.windowScene = windowScene
+        window = UIWindow(windowScene: windowScene) // smartass Ray)
         let navigationController = UINavigationController()
         // vyebon start
         navigationController.navigationBar.tintColor = .systemGray
         navigationController.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.systemGray]
-        // vyebon end
+        
         let coordinator = MainCoordinator()
         coordinator.navController = navigationController
 

@@ -10,14 +10,14 @@ import UIKit
 class SecondViewController: UIViewController, CoordinatorDelegate {
     
     var coordinator: MainCoordinator?
-    var item: String?
+    var textString: String?
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view.backgroundColor = .yellow
-        title = item
+        title = textString
         
     }
     
