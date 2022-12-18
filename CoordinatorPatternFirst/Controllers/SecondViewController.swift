@@ -7,9 +7,9 @@
 
 import UIKit
 
-class SecondViewController: UIViewController, CoordinatorDelegate {
+class SecondViewController: UIViewController {
     
-    var coordinator: MainCoordinator?
+    var coordinator: FirstVCCoordinator?
     var textString: String?
     
 

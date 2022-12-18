@@ -10,30 +10,27 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    var navController = UINavigationController()
+    var coordinator: FirstVCCoordinatorProtocol?
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        
-        // start dancing from here...
-
+ 
         guard let windowScene = (scene as? UIWindowScene) else { return }
-//        window = UIWindow(frame: UIScreen.main.bounds)
-//        window?.windowScene = windowScene
-        window = UIWindow(windowScene: windowScene) // smartass Ray)
-        let navigationController = UINavigationController()
-        // vyebon start
-        navigationController.navigationBar.tintColor = .systemGray
-        navigationController.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.systemGray]
+        window = UIWindow(windowScene: windowScene)
         
-        let coordinator = MainCoordinator()
-        coordinator.navController = navigationController
-
-        window?.rootViewController = navigationController
+        coordinator = FirstVCCoordinator(navController: self.navController)
+        coordinator?.start()
+        configureNavController()
+        window?.rootViewController = self.navController
         window?.makeKeyAndVisible()
-        
-        coordinator.start()
-        
-        
+    }
+    
+    private func configureNavController() {
+        // Bar button color change
+        navController.navigationBar.tintColor = .systemGray
+        // Bar title color change
+        navController.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.systemGray]
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
