@@ -13,7 +13,7 @@ class FirstVC: UIViewController {
     
     private let signInButton = GenericButton(title: "Sign In", image: Constants.chevron, color: .systemMint)
     private let helpButton = GenericButton(title: "Call 911", image: Constants.iPhone, color: .systemBlue)
-    private let chatButton = GenericButton(title: "Chat", image: nil, color: .systemIndigo)
+    private let modeButton = GenericButton(title: "Choose Mode", image: Constants.mode, color: .systemIndigo)
     
     private var signingIn = false {
         didSet {
@@ -40,22 +40,21 @@ class FirstVC: UIViewController {
         updateUI()
         signInButtonConfigure()
         helpButtonConfigure()
-        chatButtonConfigure()
+        modeButtonConfigure()
     }
     
-    private func chatButtonConfigure() {
+    private func modeButtonConfigure() {
+        modeButton.showsMenuAsPrimaryAction = true
         
-        chatButton.showsMenuAsPrimaryAction = true
-        
-        chatButton.menu = UIMenu(children: [
-            UIAction(title: "Dark Mode", image: Constants.mail) { _ in
-                self.navigationController?.overrideUserInterfaceStyle = .dark
+        modeButton.menu = UIMenu(children: [
+            UIAction(title: "Light Mode", image: Constants.light) { _ in
+                self.navigationController?.overrideUserInterfaceStyle = .light
             },
-            UIAction(title: "Send message", image: Constants.message) { _ in print("Start chating") }
+            UIAction(title: "Dark Mode", image: Constants.dark) { _ in
+                self.navigationController?.overrideUserInterfaceStyle = .dark
+            }
         ])
         
-        chatButton.changesSelectionAsPrimaryAction = true
-//        chatButton.showsMenuAsPrimaryAction = true
     }
     
     private func signInButtonConfigure() {
@@ -86,7 +85,7 @@ class FirstVC: UIViewController {
         view.backgroundColor = .systemBackground
         
         view.addSubview(stackView)
-        stackView.addAllSubviews(signInButton, chatButton, helpButton)
+        stackView.addAllSubviews(signInButton, modeButton, helpButton)
         
         // Layout constraints
         
@@ -97,7 +96,7 @@ class FirstVC: UIViewController {
             
             signInButton.widthAnchor.constraint(equalTo: stackView.widthAnchor),
             helpButton.widthAnchor.constraint(equalTo: stackView.widthAnchor),
-            chatButton.widthAnchor.constraint(equalTo: stackView.widthAnchor)
+            modeButton.widthAnchor.constraint(equalTo: stackView.widthAnchor)
         ])
     }
 
