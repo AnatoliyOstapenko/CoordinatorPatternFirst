@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BC47C14E294F4D2000759070 /* GenericButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC47C14D294F4D2000759070 /* GenericButton.swift */; };
-		BC47C155294F50C300759070 /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC47C154294F50C300759070 /* UIView+Ext.swift */; };
+		BC47C155294F50C300759070 /* UIStackView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC47C154294F50C300759070 /* UIStackView+Ext.swift */; };
 		BC47C158294F52BC00759070 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC47C157294F52BC00759070 /* Constants.swift */; };
 		BC9D779027ECE523008554EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9D778F27ECE523008554EC /* AppDelegate.swift */; };
 		BC9D779227ECE523008554EC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9D779127ECE523008554EC /* SceneDelegate.swift */; };
@@ -21,7 +21,7 @@
 
 /* Begin PBXFileReference section */
 		BC47C14D294F4D2000759070 /* GenericButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericButton.swift; sourceTree = "<group>"; };
-		BC47C154294F50C300759070 /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		BC47C154294F50C300759070 /* UIStackView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Ext.swift"; sourceTree = "<group>"; };
 		BC47C157294F52BC00759070 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BC9D778C27ECE523008554EC /* CoordinatorPatternFirst.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoordinatorPatternFirst.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC9D778F27ECE523008554EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -91,7 +91,7 @@
 		BC47C156294F50C700759070 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				BC47C154294F50C300759070 /* UIView+Ext.swift */,
+				BC47C154294F50C300759070 /* UIStackView+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -201,7 +201,7 @@
 				BC9D779427ECE523008554EC /* FirstVC.swift in Sources */,
 				BC9D779027ECE523008554EC /* AppDelegate.swift in Sources */,
 				BC47C14E294F4D2000759070 /* GenericButton.swift in Sources */,
-				BC47C155294F50C300759070 /* UIView+Ext.swift in Sources */,
+				BC47C155294F50C300759070 /* UIStackView+Ext.swift in Sources */,
 				BC9D77A627ECF82F008554EC /* SecondViewController.swift in Sources */,
 				BC9D779227ECE523008554EC /* SceneDelegate.swift in Sources */,
 				BC47C158294F52BC00759070 /* Constants.swift in Sources */,

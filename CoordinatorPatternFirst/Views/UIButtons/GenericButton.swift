@@ -34,18 +34,9 @@ class GenericButton: UIButton {
         configuration?.imagePlacement = .trailing // set image on the right
         configuration?.preferredSymbolConfigurationForImage
           = UIImage.SymbolConfiguration(scale: .medium) // size of image
-
-        configuration?.titleTextAttributesTransformer =
-          UIConfigurationTextAttributesTransformer { incoming in
-            // 1
-            var outgoing = incoming
-            // 2
-            outgoing.font = UIFont.preferredFont(forTextStyle: .headline)
-            // 3
-            return outgoing
-          }
+        
         translatesAutoresizingMaskIntoConstraints = false
-           
+    
     }
     
 }

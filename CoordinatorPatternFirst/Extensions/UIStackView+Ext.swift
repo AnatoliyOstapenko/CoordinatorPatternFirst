@@ -7,11 +7,13 @@
 
 import UIKit
 
-extension UIView {
+extension UIStackView {
     
     func addAllSubviews(_ views: UIView...) {
-        views.forEach { addSubview($0) }
+        views.forEach { addArrangedSubview($0) }
     }
     
 }
+
+
 
